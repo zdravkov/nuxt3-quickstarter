@@ -16,7 +16,7 @@
 <script setup>
 const props = defineProps(['path'])
 const { path } = toRefs(props)
-
+const size = '10em'
 const emit = defineEmits(['update:path', 'upload'])
 
 const supabase = useSupabaseClient()

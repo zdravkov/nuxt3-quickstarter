@@ -9,5 +9,21 @@
   "devDependencies": {
     "@nuxtjs/supabase": "^0.1.23",
     "nuxt": "3.0.0-rc.8"
+  },
+  "dependencies": {
+    "@progress/kendo-data-query": "^1.6.0",
+    "@progress/kendo-drawing": "^1.17.1",
+    "@progress/kendo-licensing": "^1.2.2",
+    "@progress/kendo-theme-default": "^5.10.0",
+    "@progress/kendo-vue-animation": "^3.6.4",
+    "@progress/kendo-vue-data-tools": "^3.6.4",
+    "@progress/kendo-vue-dateinputs": "^3.6.4",
+    "@progress/kendo-vue-dropdowns": "^3.6.4",
+    "@progress/kendo-vue-grid": "^3.6.4",
+    "@progress/kendo-vue-indicators": "^3.6.4",
+    "@progress/kendo-vue-inputs": "^3.6.4",
+    "@progress/kendo-vue-intl": "^3.6.4",
+    "@progress/kendo-vue-layout": "^3.6.4",
+    "@progress/kendo-vue-popup": "^3.6.4"
   }
 }
