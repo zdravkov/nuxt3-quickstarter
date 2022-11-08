@@ -21,7 +21,7 @@
       <grid-toolbar>
         <div @click="closeEdit">
           <kbutton title="Add new" :theme-color="'primary'" @click="addRecord">
-            Add new
+            Create new Friends' League
           </kbutton>
         </div>
       </grid-toolbar>

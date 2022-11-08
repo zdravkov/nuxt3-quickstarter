@@ -7,23 +7,16 @@
       <AppBarSpacer :width="4" />
   
       <AppBarSection>
-        <h1 class="title">Kendo UI for Vue</h1>
+        <h1 class="title">
+          <NuxtLink :to="'/'">
+            Fifa 2022 Fiends League
+            </NuxtLink></h1>
       </AppBarSection>
   
       <AppBarSpacer :width="32" />
   
       <AppBarSection>
-        <ul>
-          <li>
-            <span>What's New</span>
-          </li>
-          <li>
-            <span>About</span>
-          </li>
-          <li>
-            <span>Contacts</span>
-          </li>
-        </ul>
+        <HeaderMenu />
       </AppBarSection>
   
       <AppBarSpacer />
