@@ -9,22 +9,23 @@
   "devDependencies": {
     "@nuxt/content": "^2.2.1",
     "@nuxtjs/supabase": "^0.1.23",
-    "nuxt": "latest"
+    "nuxt": "rc"
   },
   "dependencies": {
     "@progress/kendo-data-query": "^1.6.0",
     "@progress/kendo-drawing": "^1.17.1",
     "@progress/kendo-licensing": "^1.2.2",
     "@progress/kendo-theme-default": "^5.10.0",
-    "@progress/kendo-vue-animation": "^3.6.4",
-    "@progress/kendo-vue-data-tools": "^3.6.4",
-    "@progress/kendo-vue-dateinputs": "^3.6.4",
-    "@progress/kendo-vue-dropdowns": "^3.6.4",
-    "@progress/kendo-vue-grid": "^3.6.4",
-    "@progress/kendo-vue-indicators": "^3.6.4",
-    "@progress/kendo-vue-inputs": "^3.6.4",
-    "@progress/kendo-vue-intl": "^3.6.4",
-    "@progress/kendo-vue-layout": "^3.6.4",
-    "@progress/kendo-vue-popup": "^3.6.4"
+    "@progress/kendo-vue-animation": "dev",
+    "@progress/kendo-vue-form": "dev",
+    "@progress/kendo-vue-data-tools": "dev",
+    "@progress/kendo-vue-dateinputs": "dev",
+    "@progress/kendo-vue-dropdowns": "dev",
+    "@progress/kendo-vue-grid": "dev",
+    "@progress/kendo-vue-indicators": "dev",
+    "@progress/kendo-vue-inputs": "dev",
+    "@progress/kendo-vue-intl": "dev",
+    "@progress/kendo-vue-layout": "dev",
+    "@progress/kendo-vue-popup": "dev"
   }
 }

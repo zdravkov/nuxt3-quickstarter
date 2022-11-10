@@ -1,20 +1,25 @@
 <template>
-    <form class="row flex flex-center" @submit.prevent="handleLogin">
-        <div class="col-6 form-widget">
+    <form  @submit.prevent="handleLogin">
+        <div>
             <h1 class="header">Supabase + Vue 3</h1>
             <p class="description">Sign in via magic link with your email below</p>
             <div>
-                <input class="inputField" type="email" placeholder="Your email" v-model="email" />
+                <KInput v-model="email" />
             </div>
             <div>
-                <input type="submit" class="button block" :value="loading ? 'Loading' : 'Send magic link'"
-                    :disabled="loading" />
+                <KButton type="submit" 
+                    :theme-color="'primary'"
+                    :disabled="loading" >
+                {{'Send magic link'}}
+                </KButton>
             </div>
         </div>
     </form>
 </template>
 
 <script setup>
+import { Input as KInput } from '@progress/kendo-vue-inputs';
+import { Button as KButton } from '@progress/kendo-vue-buttons';
 const supabase = useSupabaseClient()
 
 const loading = ref(false)

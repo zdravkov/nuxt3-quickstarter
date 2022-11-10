@@ -3,30 +3,21 @@
 </template>
 <script setup >
 import { BottomNavigation } from "@progress/kendo-vue-layout";
+useState('count', () => 11 );
 const items =  ref([
         {
-          text: "Inbox",
+          text: "League",
           id: 1,
-          icon: "email",
           data: {
             path: "/",
           },
-          selected: true,
         },
         {
-          text: "Calendar",
+          text: "login",
           id: 2,
-          icon: "calendar",
-          data: {
-            path: "/calendar",
-          },
-        },
-        {
-          text: "Profile",
-          id: 3,
           icon: "user",
           data: {
-            path: "/profile",
+            path: "/login",
           },
         },
       ]);

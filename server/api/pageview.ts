@@ -1,7 +1,12 @@
 const startAt = Date.now()
 let count = 0
 
-export default defineEventHandler(() => ({
+interface PageView {
+  pageview: number;
+  startAt: number;
+}
+
+export default defineEventHandler((): PageView => ({
   pageview: count++,
   startAt,
 }))

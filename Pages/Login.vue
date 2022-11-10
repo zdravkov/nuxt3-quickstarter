@@ -2,8 +2,8 @@
     <div class="container" style="padding: 50px 0 100px 0">
       <Account v-if="user" />
       <Auth v-else />
-      </div>
+    </div>
 </template>
-<script setup>
+<script setup> 
     const user = useSupabaseUser()
 </script>
