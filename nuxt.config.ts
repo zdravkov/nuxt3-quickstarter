@@ -9,6 +9,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'My amazing site!' }
       ],
     },
+   // pageTransition: { name: 'page', mode: 'out-in' }
   },
   modules: [
     '@nuxtjs/supabase',
