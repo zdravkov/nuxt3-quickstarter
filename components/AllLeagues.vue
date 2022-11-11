@@ -2,7 +2,7 @@
     <Grid
       ref="grid"
       :style="{ height: '320px' }"
-      :data-items="allUsers"
+      :data-items="combinedData"
       :columns="[
         { field: 'username', title: 'Player' },
         { field: 'champion', title: 'Champion' },
@@ -26,17 +26,16 @@
           </td>
         </template>
     </Grid>
-    pageviews: {{pageviews}}
   </template>
   <script setup lang="ts">
 import { Button as KButton} from '@progress/kendo-vue-buttons'
-  import { Grid } from '@progress/kendo-vue-grid';
-  const pageviews = useState('pageviews');
+import { Grid } from '@progress/kendo-vue-grid';
   const supabase = useSupabaseClient()
-const allUsers = await supabase
+  const allUsers = await supabase
     .from('profiles').select(`username, champion, goalscorer`);
 
-  //const { data } = await useFetch('/api/users')
+  const { data } = await useFetch('/api/users')
+  const combinedData = computed(()=>allUsers.data.concat(data.value?.users))
   </script>
 
    

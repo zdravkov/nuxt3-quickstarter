@@ -1,9 +1,20 @@
 <template>
-    <BottomNavigation :items="items" />
+    <BottomNavigation :items="items" @select="onSelect" >
+
+    </BottomNavigation>
 </template>
 <script setup >
 import { BottomNavigation } from "@progress/kendo-vue-layout";
-useState('count', () => 11 );
+
+const count = useState('count' );
+
+const onSelect = (e) => {
+  if(e.itemIndex === 1) {
+    count.value = count.value  + 1;
+  } else {
+    navigateTo(e.itemTarget.data.path)
+  }
+}
 const items =  ref([
         {
           text: "League",
@@ -11,6 +22,11 @@ const items =  ref([
           data: {
             path: "/",
           },
+        },
+        {
+          text: "Add Note",
+          icon: "plus",
+          id: 1,
         },
         {
           text: "login",

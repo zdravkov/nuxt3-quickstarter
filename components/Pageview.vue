@@ -1,13 +1,11 @@
 <script setup lang="ts">
 const { data } = await useFetch('/api/pageview')
-const count = useState('count' );
-useState('pageviews', () => data ? data.pageview : 0)
+
 </script>
 
 <template>
-  <div>
-    <span>{{ data?.pageview }}</span>
-    page views since {{ data?.startAt }}
-    count {{ count }}
+  <div text-gray:80>
+    <span font-500 text-gray>{{ data ? data.pageview : 'no' }}</span>
+    page views since {{data ? data.startAt : 'no'}}
   </div>
 </template>

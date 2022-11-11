@@ -15,6 +15,10 @@
 </template>
 <script setup lang="ts">
 import { Button as KButton} from '@progress/kendo-vue-buttons'
+definePageMeta({
+  middleware: ["auth"]
+  // or middleware: 'auth'
+})
 const route = useRoute()
 const appConfig = useAppConfig()
 

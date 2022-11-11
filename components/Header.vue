@@ -22,16 +22,15 @@
       <AppBarSpacer />
   
       <AppBarSection class="actions">
-        <KButton :fill-mode="'flat'">
+        <div>
           <BadgeContainer
-            :shape="'dot'"
-            :themeColor="'info'"
+          :themeColor="'info'"
             :size="'small'"
-            :position="'inside'"
-          >
+           :rounded="'full'" :content="'content'">
             <span class="k-icon k-i-bell" />
+            <template v-slot:content> {{count}}</template>
           </BadgeContainer>
-        </KButton>
+        </div>  
       </AppBarSection>
   
       <AppBarSection>
@@ -39,40 +38,27 @@
       </AppBarSection>
   
       <AppBarSection>
-        <KAvatar type="image">
+        <KAvatar type="image" :rounded="'full'">
           <img :src="kendokaAvatar" />
         </KAvatar>
       </AppBarSection>
     </AppBar>
   </template>
-  <script>
+
+<script setup>
   import {
     AppBar,
     AppBarSection,
     AppBarSpacer,
     Avatar as KAvatar,
   } from '@progress/kendo-vue-layout';
-  import { Button } from '@progress/kendo-vue-buttons';
+  import { Button as KButton } from '@progress/kendo-vue-buttons';
   import { BadgeContainer } from '@progress/kendo-vue-indicators';
-  let kendokaAvatar = 'https://www.telerik.com/kendo-vue-ui/components/layout/assets/appbar/kendoka-vue.png';
+
+const count = useState('count', () => 1 );
+  const kendokaAvatar = 'https://www.telerik.com/kendo-vue-ui/components/layout/assets/appbar/kendoka-vue.png';
   
-  
-  export default {
-    components: {
-      AppBar,
-      AppBarSection,
-      AppBarSpacer,
-      KAvatar,
-      BadgeContainer,
-      KButton: Button,
-    },
-    data() {
-      return {
-        kendokaAvatar,
-      };
-    },
-  };
-  </script>
+</script>
   
   <style scoped>
   body {
